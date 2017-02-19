@@ -45,4 +45,25 @@ class app {
 
 We build the namespace to use build the autoloading fuctionality.
 
+<h3><strong> Autoloading</strong></h3>
+1. We create the loader class in the core directory of our app.
+2. spl_autoload_register - accepts either a function and returns a class name via a variable $class or accepts array when working with classes (first argument is the location of the class or namespace/$className, method_of_the_class)
+3. we echo to see if we load get the class name as a return of the autoload function.
 
+<?php
+namespace framework\core;
+
+final class loader{
+	private function __construct(){
+
+	}
+
+	public static function registerAutoload(){
+		spl_autoload_register(array('\framework\core\loader','autoload'));
+	}
+
+	public static function autoload($class){
+		// self::loadClass($class);
+		echo $class;
+	}
+}
