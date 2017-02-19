@@ -16,7 +16,7 @@ Testing OOP and design patters by building a framework
 <li>set the namespace of the file.</li>
 <li>build the getInstance method.
 <li>build the run method.</li>
-<li> include the file in the bootstrap index.php -- <i>include realpath(//__DIR//__.DIRECTORY_SEPARATOR.'core'.DIRECTORY_SEPARATOR.'app.php')</i> --</li>
+<li> include the file in the bootstrap index.php -- <i>include realpath(__DIR__.DIRECTORY_SEPARATOR.'core'.DIRECTORY_SEPARATOR.'app.php')</i> --</li>
 <?php
 namespace framework\core;
 
