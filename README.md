@@ -54,6 +54,7 @@ We build the namespace to use build the autoloading fuctionality.
 namespace framework\core;
 
 final class loader{
+
 	private function __construct(){
 
 	}
