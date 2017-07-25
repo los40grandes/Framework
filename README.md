@@ -57,6 +57,7 @@ We build the namespace to use build the autoloading fuctionality.
 6. Create method <strong>loadClass</strong> which checks if the class we have received from spl_autoload_register has been register trough <strong>registerAutoload</strong>.
 	6.1 if the namespace has been registered then we have the path as per "4." and "4.1", so we substitute the namespace with the full path to the file and we add ".php" extension.
 	6.2 else we throw an exception.
+
 ```
 <?php
 namespace framework\core;
