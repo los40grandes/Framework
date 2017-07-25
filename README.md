@@ -17,6 +17,8 @@ Testing OOP and design patters by building a framework
 <li>build the getInstance method.
 <li>build the run method.</li>
 <li> include the file in the bootstrap index.php -- <i>include realpath(__DIR__.DIRECTORY_SEPARATOR.'core'.DIRECTORY_SEPARATOR.'app.php')</i> --</li>
+
+```
 <?php
 namespace framework\core;
 
@@ -42,7 +44,7 @@ class app {
 		return self::$_instance;
 	}
 }
-
+```
 We build the namespace to use build the autoloading fuctionality.
 
 <h3><strong> Autoloading</strong></h3>
@@ -55,7 +57,7 @@ We build the namespace to use build the autoloading fuctionality.
 6. Create method <strong>loadClass</strong> which checks if the class we have received from spl_autoload_register has been register trough <strong>registerAutoload</strong>.
 	6.1 if the namespace has been registered then we have the path as per "4." and "4.1", so we substitute the namespace with the full path to the file and we add ".php" extension.
 	6.2 else we throw an exception.
-
+```
 <?php
 namespace framework\core;
 
@@ -117,3 +119,4 @@ final class loader{
 		}
 	}
 }
+```
